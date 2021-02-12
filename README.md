@@ -1,2 +1,9 @@
-# oo2021 kodutööde esitamise repositoorium.
-Iga õppur teeb repositooriumist fork-haru ning paneb oma tööd sinna sisse.
+# EST
+
+## Objektorienteeritud programmeerimise (Java) kursuse repositoorium
+2021 2. semester
+
+# ENG
+
+## Object-oriented programming (Java) course repository
+2021 2nd semester
