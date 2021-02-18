@@ -1,0 +1,8 @@
+Andmed:
+
+company_name (autotootja nimi)
+model_name (automudeli nimi)
+model_year (automudeli aastakäik)
+fuel (kütus)
+engine_displacement (mootori suurus)
+engine_power (mootori võimsus kW'des)
