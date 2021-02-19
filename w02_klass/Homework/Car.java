@@ -1,8 +1,8 @@
 public class Car {
-    public String company_name = "";
-    public String model_name = "";
-    public int model_year;
+    public String companyName = "";
+    public String modelName = "";
+    public int modelYear;
     public String fuel = "";
-    public Double engine_displacement;
-    public int engine_power;
+    public Double engineDisplacement;
+    public int enginePower;
 }

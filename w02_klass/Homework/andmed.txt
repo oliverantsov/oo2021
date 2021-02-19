@@ -1,8 +1,8 @@
 Andmed:
 
-company_name (autotootja nimi)
-model_name (automudeli nimi)
-model_year (automudeli aastak‰ik)
-fuel (k¸tus)
-engine_displacement (mootori suurus)
-engine_power (mootori vıimsus kW'des)
+companyName (autotootja nimi)
+modelName (automudeli nimi)
+modelYear (automudeli aastak√§ik)
+fuel (k√ºtus)
+engineDisplacement (mootori suurus)
+enginePower (mootori v√µimsus kW'des)
