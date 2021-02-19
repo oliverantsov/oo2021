@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        linkedlist();
+        lists();
     }
 
     public static void characters(){
