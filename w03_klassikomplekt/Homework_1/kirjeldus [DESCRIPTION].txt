@@ -1,0 +1,31 @@
+---------------------------------------------------------------------------------------------------------------------------------
+[EST]
+
+3. nädala mängu on uuendatud esemete süsteemi & inventariga.
+Esemed on mängus kujutatud väikeste tähtedega järgmiselt:
+    - pikk mõõk = l
+    - sõjakirves = b
+    - rüütlikinnas = g
+    - kroon = c
+    - kilp = s
+
+Eseme peale liikudes kuvatakse mängu allservas teksti, mida parasjagu "üles korjati".
+"Üles korjates" kandub ese inventari. Et näha, mis parajasti inventaris leidub, tuleb Terminali kirjutada "inv".
+
+Mäng on lõppenud, kui kõik esemed on mänguplatsilt kokku kogutud!
+---------------------------------------------------------------------------------------------------------------------------------
+[ENG]
+
+3rd week's game has been updated with an item system & inventory.
+Items are depicted by following lowercase letters:
+    - longsword = l
+    - battleaxe = b
+    - gauntlet = g
+    - crown = c
+    - shield = s
+
+Moving on top of an item will trigger a text message that shows what item was picked up accordingly.
+Picked up item will move to the inventory. To see, what items are currently stored in the inventory, type "inv" into Terminal.
+
+Game is over when all of the items are picked up from the playing field!
+---------------------------------------------------------------------------------------------------------------------------------
