@@ -41,5 +41,4 @@ public class OnlineRW {
         // Keskmise leidmine (sum / count)
         return sum(input) / input.length;
     }
-    
 }
