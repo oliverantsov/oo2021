@@ -21,7 +21,7 @@ public class EstonianID implements PersonalCodeBehaviour {
     @Override
     public int getFullYear() {
         int fullYear = Integer.parseInt(code.substring(1, 3));
-        if(fullYear < 21){
+        if(fullYear < 22){
             return 2000 + fullYear;
         } else {
             return 1900 + fullYear;
@@ -36,7 +36,7 @@ public class EstonianID implements PersonalCodeBehaviour {
         int fullYear = Integer.parseInt(code.substring(1, 3));
         int fullMonth = Integer.parseInt(code.substring(3, 5));
         int fullDay = Integer.parseInt(code.substring(5, 7));
-        if(fullYear < 21){
+        if(fullYear < 22){
             return fullDay + "." + fullMonth + "." + (2000 + fullYear);
         } else {
             return fullDay + "." + fullMonth + "." + (1900 + fullYear);
@@ -44,12 +44,15 @@ public class EstonianID implements PersonalCodeBehaviour {
     }
 
     @Override
-    public int getAge() {
-        int fullYear = Integer.parseInt(code.substring(1, 3));
-        if(fullYear < 21){
-            return 21 - fullYear;
-        } else {
-            return 2000 + fullYear;
-        }
+    public String getMonth() {
+        int fullMonth = Integer.parseInt(code.substring(3, 5));
+        return "Kuu: " + fullMonth;
     }
+
+    @Override
+    public String getDay() {
+        int fullDay = Integer.parseInt(code.substring(5, 7));
+        return "Päev: " + fullDay;
+    }
+
 }
