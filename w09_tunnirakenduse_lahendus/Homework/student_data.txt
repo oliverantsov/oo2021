@@ -1,0 +1,15 @@
+Juss,4,25/25
+Oliver,4,17/25
+Martin,5,21/25
+Mihkel,2,10/25
+Liina,4,23/25
+Johanna,3,15/25
+Carmen,2,8/25
+Kadi,3,18/25
+Peeter,5,24/25
+Hele,3,16/25
+Triin,5,25/25
+Mari,4,19/25
+Oskar,2,5/25
+Vahur,5,20/25
+Toomas,2,4/25
