@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Add to-do</title>
+</head>
+<body>
+    <h1>Add Your to-do here!</h1>
+    <form action="#" th:action="@{/newtodo}" th:object="${todo}" method="POST">
+        <label for="description">To-do description</label>
+        <br>
+        <br>
+        <input th:field="*{description}" type="text" name="description" id="description">
+        <br>
+        <br>
+        <label for="date">To-do date</label>
+        <br>
+        <br>
+        <input th:field="*{date}" type="text" name="date" id="date">
+        <br>
+        <br>
+        <button type="submit">Click here to save Your to-do!</button>
+    </form>
+</body>
+</html>

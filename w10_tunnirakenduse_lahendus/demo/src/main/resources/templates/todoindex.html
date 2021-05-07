@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <title>To-do list</title>
+</head>
+<body>
+    <div id="addbox">
+        <p><a href="/addtodo">Add a new to-do by clicking here!</a></p>
+    </div>
+    <div th:switch="${todos}">
+        <h2 th:case="null">There are currently no to-dos added!</h2>
+        <div th:case="*">
+            <table>
+                <thead>
+                    <tr>
+                        <th>To-do description</th>
+                        <th>To-do date to be completed</th>
+                        <th>Edit to-do</th>
+                        <th>Delete to-do</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="todo : ${todos}">
+                        <td th:text="${todo.description}"></td>
+                        <td th:text="${todo.date}"></td>
+                        <td><a th:href="@{/edittodo/{id}(id=${todo.id})}">Edit</a></td>
+                        <td><a th:href="@{/deletetodo/{id}(id=${todo.id})}">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+</html>

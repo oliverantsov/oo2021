@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <title>Update to-do</title>
+</head>
+<body>
+    <h1>Update Your to-do here!</h1>
+    <form action="#" th:action="@{/updatetodo/{id}(id=${todo.id})}" th:object="${todo}" method="post">
+        <label for="description">To-do description</label>
+        <input th:field="*{description}" type="text" name="description" id="description">
+        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span><br/>
+        <label for="date">To-do date</label>
+        <input th:field="*{date}" type="text" name="date" id="date">
+        <button type="submit">Click here to update Your selected to-do!</button>
+    </form>
+</body>
+</html>
