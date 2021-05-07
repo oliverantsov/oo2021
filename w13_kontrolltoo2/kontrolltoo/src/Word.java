@@ -14,7 +14,8 @@ public class Word implements WordInterface {
         char userLetter = scanner.next().charAt(0);
         char lowercaseUserLetter = Character.toLowerCase(userLetter);
         
-        scanner.close();
+        // Exception in thread "main" java.util.NoSuchElementException: No line found
+        //scanner.close();
 
         for(i = 0; i < lowercaseUserWord.length(); i++){
             if(lowercaseUserWord.charAt(i) == lowercaseUserLetter){
