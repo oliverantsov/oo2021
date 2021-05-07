@@ -13,14 +13,14 @@ public class Word implements WordInterface {
         System.out.println("Enter random letter to check from previously entered word: ");
         char userLetter = scanner.next().charAt(0);
         
-        for(userLetter = 'a'; userLetter <= 'ü'; userLetter++){
-            for(i = 0; i < userWord.length(); i++){
-
+        for(i = 0; i < userWord.length(); i++){
+            if(userWord.charAt(i) == userLetter){
                 letterCount = letterCount + 1;
             }
         }
-        
-        return letterCount;
 
+        System.out.println("Word " + userWord.toUpperCase() + " contains that many '" + userLetter + "' letters: ");
+        return letterCount;
     }
+
 }
