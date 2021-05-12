@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Sentence implements WordInterface {
@@ -62,16 +63,28 @@ public class Sentence implements WordInterface {
             FileInputStream fs = new FileInputStream("words.txt");
             BufferedReader br = new BufferedReader(new java.io.InputStreamReader(fs));
 
+            HashSet<String> uniqueWords = new HashSet<String>();
+            
+
+
+            String txtLine = br.readLine();
+
+            while(txtLine != null){
+                String[] txtFileWords = txtLine.split("\n");
+                for (String txtWord : txtFileWords){
+                    System.out.println(txtWord);
+                    uniqueWords.add(txtWord);
+                }
+                txtLine = br.readLine();
+            }
+
+            System.out.println(uniqueWords);
+
             for(int z = 0; z < wordsInSentence.length; z++){
                 pw.println(wordsInSentence[z]);
             }
             pw.close();
 
-            String txtLine = br.readLine();
-            while(txtLine != null){
-                txtLine = br.readLine();
-                
-            }
             br.close();
 
         } catch (FileNotFoundException e) {
