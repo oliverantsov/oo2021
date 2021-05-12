@@ -1,3 +1,3 @@
 public interface WordInterface {
-    public int getLetterCount();
+    public String interfaceMethod();
 }

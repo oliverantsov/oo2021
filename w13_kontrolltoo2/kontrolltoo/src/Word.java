@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Word implements WordInterface {
 
     @Override
-    public int getLetterCount() {
+    public String interfaceMethod() {
         Scanner scanner = new Scanner(System.in);
         int letterCount = 0;
         int i = 0;
@@ -23,8 +23,8 @@ public class Word implements WordInterface {
             }
         }
 
-        System.out.print("Word " + lowercaseUserWord.toUpperCase() + " contains following amount of '" + lowercaseUserLetter + "' letters: ");
-        return letterCount;
+        System.out.print("Word " + lowercaseUserWord.toUpperCase() + " contains following amount of '" + lowercaseUserLetter + "' letters: " + letterCount);
+        return "Word.java -> COMPLETED!";
     }
 
 }
