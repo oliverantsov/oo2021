@@ -4,10 +4,11 @@ public class Main {
         System.out.println("-----------------------------------------------------");
         System.out.println(word.interfaceMethod());
         System.out.println("-----------------------------------------------------");
-        
+        System.out.println("/////////////////////////////////////////////////////");
+        System.out.println("-----------------------------------------------------");
         Sentence sentence = new Sentence();
         System.out.println(sentence.interfaceMethod());
         System.out.println("-----------------------------------------------------");
-        //System.out.println(sentence.fileStuff());
+        System.out.println("/////////////////////////////////////////////////////");
     }
 }

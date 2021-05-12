@@ -1,5 +1,8 @@
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -50,25 +53,42 @@ public class Sentence implements WordInterface {
 
 
 
-        File output = new File("words.txt");
-        try {
-            PrintWriter pw = new PrintWriter(output);
-            for(int z = 0; z < wordsInSentence.length; z++){
+        
 
+        try {
+
+            FileWriter fw = new FileWriter("words.txt", true);
+            PrintWriter pw = new PrintWriter(fw);
+            FileInputStream fs = new FileInputStream("words.txt");
+            BufferedReader br = new BufferedReader(new java.io.InputStreamReader(fs));
+
+            for(int z = 0; z < wordsInSentence.length; z++){
                 pw.println(wordsInSentence[z]);
             }
             pw.close();
+
+            String txtLine = br.readLine();
+            while(txtLine != null){
+                txtLine = br.readLine();
+                
+            }
+            br.close();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("Error because file doesn't exist!");
+            System.out.println("Error - file doesn't exist!");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Input/output error!");
         }
-
         
 
 
 
+
+
         System.out.println("-----------------------------------------------------");
-        System.out.print("SENTENCE contains following amount of 'a' letters: " + letterACountInSentence);
+        System.out.println("SENTENCE contains following amount of 'a' letters: " + letterACountInSentence);
         return "Sentence.java -> COMPLETED!";
 
     }

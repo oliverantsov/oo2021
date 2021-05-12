@@ -8,7 +8,7 @@ public class Word implements WordInterface {
         int letterCount = 0;
         int i = 0;
 
-        System.out.print("Enter random word: ");
+        System.out.print("Enter random WORD: ");
         String lowercaseUserWord = scanner.nextLine().toLowerCase();
         System.out.print("Enter random letter to check from previously entered word: ");
         char userLetter = scanner.next().charAt(0);
@@ -22,8 +22,8 @@ public class Word implements WordInterface {
                 letterCount = letterCount + 1;
             }
         }
-
-        System.out.print("Word " + lowercaseUserWord.toUpperCase() + " contains following amount of '" + lowercaseUserLetter + "' letters: " + letterCount);
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Word " + lowercaseUserWord.toUpperCase() + " contains following amount of '" + lowercaseUserLetter + "' letters: " + letterCount);
         return "Word.java -> COMPLETED!";
     }
 
