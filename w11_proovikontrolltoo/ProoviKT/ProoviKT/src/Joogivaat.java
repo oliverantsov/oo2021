@@ -13,7 +13,15 @@ public class Joogivaat {
         this.jook = null;
     }
 
-    public void taidaPudelid(Joogipudel jook){
+    public double kuvaJoogiKogus(){
+        return this.joogiKogus;
+    }
+
+    public double kuvaUleKogus(){
+        return this.uleKogus;
+    }
+
+    public void joogipudeliTaitmine(Joogipudel jook){
         double joogiKogus = jook.pudeliMassJoogiga();
         if(joogiKogus + this.joogiKogus > vaadiRuumala && this.jook == null || this.jook == jook.jook){
             this.uleKogus += (this.joogiKogus + joogiKogus) - this.vaadiRuumala;
@@ -28,17 +36,9 @@ public class Joogivaat {
         }
     }
 
-    public double kuvaJoogiKogus(){
-        return this.joogiKogus;
-    }
-
-    public double kuvaUleKogus(){
-        return this.uleKogus;
-    }
-
     public ArrayList<Joogipudel> vaadistVillimineJoogipudelitesse(Joogipudel pudel){
         ArrayList<Joogipudel> pudelid = new ArrayList<Joogipudel>();
-        for(int i=0; this.joogiKogus > pudel.pudeliMaht; i++){
+        for(int i = 0; this.joogiKogus > pudel.pudeliMaht; i++){
             this.joogiKogus -= pudel.pudeliMaht;
             this.joogiPudel = new Joogipudel(pudel.pudeliMaht, pudel.pudeliTyyp, pudel.taaraMaksumus, this.jook);
             pudelid.add(joogiPudel);
